@@ -2,16 +2,12 @@ import React from "react"
 import {Redirect} from "react-router-dom"
 
 class GameOver extends React.Component{
-    constructor(){
-        super()
-
-    }
 
     render(){
         const state = this.props.location.state;
         if (!state || !state.fromStartScreen){
-            console.log("redirect to WelcomeScreen")
-            return (<Redirect to="/" />)
+            console.log("redirect to WelcomeScreen");
+            return (<Redirect to="/welcome" />)
         }else{
             return (
                 <div>
